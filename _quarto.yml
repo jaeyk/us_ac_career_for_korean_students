@@ -1,0 +1,35 @@
+
+project:
+  type: website
+
+website:
+  title: "미국 아카데믹 커리어를 위한 조언"
+  navbar:
+    left:
+      - href: index.qmd
+        text: 소개
+      - href: chapter1.qmd
+        text: 박사 논문 커미티
+      - href: chapter2.qmd
+        text: 발제와 토론
+      - href: chapter3.qmd
+        text: 연구 생산성
+      - href: chapter4.qmd
+        text: 네트워킹
+      - href: chapter5.qmd
+        text: 잡마켓
+      - href: chapter6.qmd
+        text: 잡톡
+      - href: chapter7.qmd
+        text: 오퍼 협상
+      - href: conclusion.qmd
+        text: 마무리하며
+      - href: license.qmd
+        text: 라이선스
+
+format:
+  html:
+    lang: ko
+    theme: cosmo
+    toc: true
+    toc-location: left
