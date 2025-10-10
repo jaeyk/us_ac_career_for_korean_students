@@ -4,18 +4,22 @@ body {
   font-family: "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
 }
 
-/* Korean-friendly line breaking + widow control */
-main p {
-  word-break: keep-all;   /* don't split inside Korean words */
-  line-break: auto;       /* or 'loose' for a bit more flexibility */
+/* Korean-friendly widow control with higher specificity */
+html[lang="ko"] main p {
+  word-break: keep-all !important;   /* stop splitting Hangul */
+  line-break: auto;
   hyphens: none;
-  text-wrap: balance;     /* keep! helps reduce widows */
+  text-wrap: balance;                /* reduce widows */
   widows: 2;
   orphans: 2;
 }
 
-/* But still allow long links/code to wrap sensibly */
-main p a, main p code, main p kbd, main p samp {
+/* Allow long URLs/code to wrap */
+html[lang="ko"] main p a,
+html[lang="ko"] main p code,
+html[lang="ko"] main p kbd,
+html[lang="ko"] main p samp {
   word-break: break-all;
 }
+
 
