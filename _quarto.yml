@@ -30,6 +30,7 @@ website:
 format:
   html:
     lang: ko
-    theme: cosmo
+    theme: darkly
+    css: styles.css
     toc: true
     toc-location: left

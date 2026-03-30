@@ -3,10 +3,6 @@ title: "네트워킹 요령"
 author: 
   name: "김재연"
   url: https://jaeyk.github.io
-format:
-  html:
-    theme: cosmo
-    css: styles.css
 date: 2025-05-08
 ---
 

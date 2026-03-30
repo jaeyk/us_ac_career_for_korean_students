@@ -1,5 +1,247 @@
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
+
+:root {
+  --bg: #0f131a;
+  --surface: #161b23;
+  --surface-alt: #1b2230;
+  --text: #eef2f7;
+  --muted: #97a3b6;
+  --accent: #8ab4f8;
+  --accent-hover: #b3cefb;
+  --border: #273142;
+}
 
 body {
+  background-color: var(--bg);
+  color: var(--text);
   font-family: "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  line-height: 1.85;
+}
+
+body,
+.content,
+main.content,
+.quarto-container {
+  color: var(--text);
+}
+
+.navbar {
+  background-color: rgba(15, 19, 26, 0.92);
+  backdrop-filter: blur(10px);
+}
+
+.navbar,
+#quarto-sidebar,
+#TOC,
+.sidebar nav[role="doc-toc"],
+.callout,
+div.sourceCode,
+pre,
+code,
+hr {
+  border-color: var(--border) !important;
+}
+
+.navbar {
+  border-bottom: 1px solid var(--border);
+}
+
+.quarto-title-block {
+  margin-bottom: 2.5rem;
+}
+
+.quarto-title .title {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.75rem;
+}
+
+.navbar,
+.navbar-title,
+.navbar a,
+.navbar .nav-link,
+.navbar .nav-link:visited,
+.sidebar nav[role="doc-toc"] a,
+#TOC a {
+  color: var(--muted) !important;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus,
+.navbar .nav-link.active,
+.navbar .active > .nav-link,
+.sidebar nav[role="doc-toc"] a:hover,
+.sidebar nav[role="doc-toc"] a.active,
+#TOC a:hover,
+#TOC a.active,
+#TOC .active > a {
+  color: var(--accent) !important;
+}
+
+.navbar .nav-link,
+.navbar-title {
+  transition: color 0.2s ease;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.quarto-title .title,
+.listing-title {
+  color: var(--text);
+}
+
+h1,
+h2,
+h3 {
+  letter-spacing: -0.02em;
+  margin-top: 2.25rem;
+}
+
+h2,
+h3,
+h4 {
+  margin-bottom: 0.8rem;
+}
+
+p,
+li,
+dt,
+dd,
+figcaption,
+.figure-caption,
+.callout-body-container,
+.quarto-post .body,
+.quarto-title-meta,
+.quarto-title-meta-heading,
+.quarto-title-meta-contents {
+  color: var(--text);
+}
+
+p,
+li {
+  max-width: 72ch;
+}
+
+a,
+a code,
+.anchorjs-link {
+  color: var(--accent);
+  text-decoration-color: rgba(138, 180, 248, 0.45);
+  text-underline-offset: 0.18em;
+}
+
+a:hover,
+a:focus,
+a code:hover,
+a code:focus,
+.anchorjs-link:hover,
+.anchorjs-link:focus {
+  color: var(--accent-hover);
+  text-decoration-color: rgba(179, 206, 251, 0.75);
+}
+
+strong,
+b {
+  color: #f6f9ff;
+}
+
+blockquote {
+  color: var(--muted);
+  border-left: 0.25rem solid var(--accent);
+}
+
+#quarto-sidebar,
+#TOC,
+.sidebar nav[role="doc-toc"] {
+  color: var(--muted);
+}
+
+.sidebar,
+#quarto-sidebar,
+#TOC,
+.sidebar nav[role="doc-toc"] {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.sidebar nav[role="doc-toc"] ul > li > a,
+#TOC ul > li > a {
+  color: var(--muted);
+}
+
+.sidebar nav[role="doc-toc"] ul > li > a,
+#TOC ul > li > a {
+  border-left: 2px solid transparent;
+  padding-left: 0.75rem;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.sidebar nav[role="doc-toc"] ul > li > a.active,
+#TOC ul > li > a.active {
+  color: var(--accent) !important;
+  font-weight: 600;
+  border-left-color: var(--accent);
+}
+
+.callout {
+  background-color: rgba(27, 34, 48, 0.45);
+  border: 1px solid rgba(39, 49, 66, 0.9);
+  border-left-width: 0.25rem;
+  border-radius: 0.5rem;
+  box-shadow: none;
+}
+
+.callout .callout-header {
+  background-color: transparent;
+  color: var(--text);
+}
+
+.callout.callout-note {
+  border-left: 0.25rem solid var(--accent);
+}
+
+pre,
+code,
+div.sourceCode,
+.sourceCode pre {
+  background-color: rgba(27, 34, 48, 0.55) !important;
+  color: var(--text) !important;
+}
+
+code:not(.sourceCode code) {
+  padding: 0.12rem 0.35rem;
+  border-radius: 0.3rem;
+}
+
+hr {
+  border-top-color: var(--border);
+}
+
+.quarto-figure figcaption,
+.figure-caption {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+table {
+  --bs-table-color: var(--text);
+  --bs-table-bg: transparent;
+  --bs-table-border-color: var(--border);
+}
+
+.table > :not(caption) > * > * {
+  background-color: transparent;
+}
+
+.menu-text,
+.navbar-nav .dropdown-menu {
+  color: inherit;
+}
+
+main.content {
+  padding-top: 1.5rem;
 }

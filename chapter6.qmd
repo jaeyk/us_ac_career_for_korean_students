@@ -3,16 +3,12 @@ title: "미국 아카데믹 잡톡 준비"
 author: 
   name: "김재연"
   url: https://jaeyk.github.io
-format:
-  html:
-    theme: cosmo
-    css: styles.css
 date: today
 ---
 
 이 장에서는 아카데믹 잡톡에 대한 조언을 정리해 보았습니다.
 
-캠퍼스 방문을 준비하는 들에게 도움이 되기를 바랍니다.
+캠퍼스 방문(flyout)을 준비하는 분들에게 도움이 되기를 바랍니다.
 
 ## 1. It’s not about YOU (잡톡에서 가장 중요한 건 내가 아닙니다).
 
