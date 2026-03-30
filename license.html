@@ -2,13 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.9.36">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>라이선스 – 미국 아카데믹 커리어를 위한 조언</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -36,10 +39,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-f418161beb48e0141c760e455f12af2c.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-c1fac2584b48ed01fb6e278e36375074.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-d6fd904d1c54ba319e3f8c30b794b012.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -69,6 +72,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
+<link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="floating nav-fixed quarto-light">
@@ -91,10 +95,6 @@ ul.task-list li input[type="checkbox"] {
   <li class="nav-item">
     <a class="nav-link" href="./index.html"> 
 <span class="menu-text">소개</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./intro.html"> 
-<span class="menu-text">유학 시작 마음가짐</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./chapter1.html"> 
@@ -125,20 +125,12 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">오퍼 협상</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./chapter8.html"> 
-<span class="menu-text">부록1</span></a>
+    <a class="nav-link" href="./conclusion.html"> 
+<span class="menu-text">마무리하며</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./chapter9.html"> 
-<span class="menu-text">부록2</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./chapter10.html"> 
-<span class="menu-text">부록3</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./chapter11.html"> 
-<span class="menu-text">부록4</span></a>
+    <a class="nav-link active" href="./license.html" aria-current="page"> 
+<span class="menu-text">라이선스</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -180,17 +172,13 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>이 소책자는 다음 라이선스에 따라 제공됩니다:</p>
-<div class="quarto-figure quarto-figure-left">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<div class="quarto-figure quarto-figure-left">
-<figure class="figure">
-<p><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ko"><img src="https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-nc-sa.svg" class="img-fluid quarto-figure quarto-figure-left figure-img"></a></p>
+<p><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ko"><img src="https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png" class="img-fluid figure-img"></a></p>
+<figcaption>Creative Commons License</figcaption>
 </figure>
 </div>
-<figcaption>CC BY-NC-SA 4.0</figcaption>
-</figure>
-</div>
-<p><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ko">크리에이티브 커먼즈 저작자표시-비영리-동일조건변경허락 4.0 국제 라이선스</a></p>
+<p>이 저작물은 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ko">크리에이티브 커먼즈 저작자표시-비영리-동일조건변경허락 4.0 국제 라이선스</a>에 따라 이용할 수 있습니다.</p>
 <ul>
 <li><strong>저작자 표시 (BY)</strong>: 원저작자를 반드시 표시해야 합니다.<br>
 </li>
@@ -255,13 +243,14 @@ ul.task-list li input[type="checkbox"] {
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
