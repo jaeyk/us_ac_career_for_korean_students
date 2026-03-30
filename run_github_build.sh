@@ -27,6 +27,21 @@ Optional environment variables:
 EOF
 }
 
+require_clean_worktree() {
+  if ! command -v git >/dev/null 2>&1; then
+    echo "Error: git is required but not installed." >&2
+    exit 1
+  fi
+
+  if [[ -n "$(git status --short)" ]]; then
+    echo "Error: you have uncommitted changes." >&2
+    echo "Commit and push your edits first, then rerun this script." >&2
+    echo >&2
+    git status --short >&2
+    exit 1
+  fi
+}
+
 dispatch_workflow() {
   if ! command -v curl >/dev/null 2>&1; then
     echo "Error: curl is required but not installed." >&2
@@ -37,6 +52,8 @@ dispatch_workflow() {
     echo "Error: dispatch mode requires GITHUB_TOKEN." >&2
     exit 1
   fi
+
+  require_clean_worktree
 
   api_url="https://api.github.com/repos/${OWNER}/${REPO}/actions/workflows/${WORKFLOW_FILE}/dispatches"
 
@@ -60,10 +77,7 @@ dispatch_workflow() {
 }
 
 push_trigger() {
-  if ! command -v git >/dev/null 2>&1; then
-    echo "Error: git is required but not installed." >&2
-    exit 1
-  fi
+  require_clean_worktree
 
   current_branch="$(git branch --show-current)"
   if [[ "${current_branch}" != "${REF}" ]]; then
