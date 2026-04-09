@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Noto+Serif+KR:wght@300;400;600;700&display=swap');
+
 :root {
   --bg: #0f131a;
   --surface: #161b23;
@@ -12,8 +14,10 @@
 body {
   background-color: var(--bg);
   color: var(--text);
-  font-family: "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans CJK KR", sans-serif;
-  line-height: 1.85;
+  font-family: "Nanum Myeongjo", "Noto Serif KR", "Batang", "BatangChe", Georgia, serif;
+  font-size: 0.92rem;
+  line-height: 1.75;
+  letter-spacing: 0.01em;
 }
 
 body,
@@ -26,6 +30,9 @@ main.content,
 .navbar {
   background-color: rgba(15, 19, 26, 0.92);
   backdrop-filter: blur(10px);
+  font-family: "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", sans-serif;
+  font-size: 0.82rem;
+  letter-spacing: 0.02em;
 }
 
 .navbar,
@@ -49,9 +56,18 @@ hr {
 }
 
 .quarto-title .title {
-  font-weight: 700;
-  letter-spacing: -0.02em;
+  font-family: "Nanum Myeongjo", "Noto Serif KR", Georgia, serif;
+  font-weight: 800;
+  letter-spacing: -0.04em;
   margin-bottom: 0.75rem;
+}
+
+.quarto-title-meta,
+.quarto-title-meta-heading,
+.quarto-title-meta-contents {
+  font-family: "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.03em;
 }
 
 .navbar,
@@ -95,9 +111,15 @@ h6,
 h1,
 h2,
 h3 {
-  letter-spacing: -0.02em;
+  font-family: "Nanum Myeongjo", "Noto Serif KR", Georgia, serif;
+  font-weight: 800;
+  letter-spacing: -0.03em;
   margin-top: 2.25rem;
 }
+
+h1 { font-size: 1.7rem; }
+h2 { font-size: 1.2rem; }
+h3 { font-size: 1.05rem; }
 
 h2,
 h3,
@@ -156,6 +178,8 @@ blockquote {
 #TOC,
 .sidebar nav[role="doc-toc"] {
   color: var(--muted);
+  font-family: "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", sans-serif;
+  font-size: 0.8rem;
 }
 
 .sidebar,
