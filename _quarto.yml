@@ -4,8 +4,10 @@ project:
 
 website:
   title: "미국 아카데믹 커리어를 위한 조언"
-  navbar:
-    left:
+  sidebar:
+    style: "docked"
+    search: false
+    contents:
       - href: index.qmd
         text: 소개
       - href: chapter1.qmd
@@ -30,8 +32,6 @@ website:
         text: 연구가 힘들다면
       - href: chapter11.qmd
         text: 노력하는 방법
-      - href: conclusion.qmd
-        text: 마무리하며
       - href: license.qmd
         text: 라이선스
 
@@ -41,4 +41,4 @@ format:
     theme: darkly
     css: styles.css
     toc: true
-    toc-location: left
+    toc-location: right
