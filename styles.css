@@ -27,15 +27,6 @@ main.content,
   color: var(--text);
 }
 
-.navbar {
-  background-color: rgba(15, 19, 26, 0.92);
-  backdrop-filter: blur(10px);
-  font-family: "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", sans-serif;
-  font-size: 0.82rem;
-  letter-spacing: 0.02em;
-}
-
-.navbar,
 #quarto-sidebar,
 #TOC,
 .sidebar nav[role="doc-toc"],
@@ -45,10 +36,6 @@ pre,
 code,
 hr {
   border-color: var(--border) !important;
-}
-
-.navbar {
-  border-bottom: 1px solid var(--border);
 }
 
 .quarto-title-block {
@@ -70,20 +57,21 @@ hr {
   letter-spacing: 0.03em;
 }
 
-.navbar,
-.navbar-title,
-.navbar a,
-.navbar .nav-link,
-.navbar .nav-link:visited,
+.sidebar-title,
+.sidebar-title a,
+.sidebar-item-text,
+.sidebar-link,
+.sidebar .sidebar-item-container a,
 .sidebar nav[role="doc-toc"] a,
 #TOC a {
   color: var(--muted) !important;
 }
 
-.navbar .nav-link:hover,
-.navbar .nav-link:focus,
-.navbar .nav-link.active,
-.navbar .active > .nav-link,
+.sidebar-title a:hover,
+.sidebar-link:hover,
+.sidebar-link:focus,
+.sidebar-item-container .active,
+.sidebar-item-container .active > .sidebar-item-text,
 .sidebar nav[role="doc-toc"] a:hover,
 .sidebar nav[role="doc-toc"] a.active,
 #TOC a:hover,
@@ -92,8 +80,8 @@ hr {
   color: var(--accent) !important;
 }
 
-.navbar .nav-link,
-.navbar-title {
+.sidebar-link,
+.sidebar-title a {
   transition: color 0.2s ease;
 }
 
@@ -190,6 +178,47 @@ blockquote {
   box-shadow: none !important;
 }
 
+#quarto-sidebar {
+  background: linear-gradient(180deg, rgba(22, 27, 35, 0.96), rgba(15, 19, 26, 0.96)) !important;
+  border-right: 1px solid var(--border) !important;
+  padding-top: 1.25rem;
+}
+
+#quarto-sidebar .sidebar-title {
+  font-family: "Nanum Myeongjo", "Noto Serif KR", Georgia, serif;
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(39, 49, 66, 0.75);
+}
+
+#quarto-sidebar .sidebar-item {
+  margin-bottom: 0.15rem;
+}
+
+#quarto-sidebar .sidebar-link {
+  border-left: 2px solid transparent;
+  font-family: "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", sans-serif;
+  font-size: 0.84rem;
+  line-height: 1.4;
+  padding: 0.45rem 0.85rem;
+  transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+
+#quarto-sidebar .sidebar-link:hover,
+#quarto-sidebar .sidebar-link:focus {
+  background-color: rgba(138, 180, 248, 0.06);
+}
+
+#quarto-sidebar .sidebar-item-container .active,
+#quarto-sidebar .sidebar-item-container .active > .sidebar-item-text {
+  border-left-color: var(--accent);
+  color: var(--accent) !important;
+  font-weight: 600;
+}
+
 .sidebar nav[role="doc-toc"] ul > li > a,
 #TOC ul > li > a {
   color: var(--muted);
@@ -257,6 +286,12 @@ table {
 
 .table > :not(caption) > * > * {
   background-color: transparent;
+}
+
+@media (max-width: 991.98px) {
+  #quarto-sidebar {
+    padding-top: 0.75rem;
+  }
 }
 
 .menu-text,
